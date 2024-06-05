@@ -18,7 +18,7 @@ const defaultData: Order = {
     city: "",
     state: "",
     country: "",
-    pinCode: "",
+    pincode: "",
   },
   status: "",
   subtotal: 0,
@@ -40,7 +40,7 @@ const TransactionManagement = () => {
   const { isLoading, data, isError } = useOrderDetailsQuery(params.id!);
 
   const {
-    shippingInfo: { address, city, state, country, pinCode },
+    shippingInfo: { address, city, state, country, pincode },
     orderItems,
     user: { name },
     status,
@@ -77,7 +77,7 @@ const TransactionManagement = () => {
       <AdminSidebar />
       <main className="product-management">
         {isLoading ? (
-          <Loader/>
+          <Loader />
         ) : (
           <>
             <section
@@ -109,7 +109,7 @@ const TransactionManagement = () => {
               <p>Name: {name}</p>
               <p>
                 Address:{" "}
-                {`${address}, ${city}, ${state}, ${country} ${pinCode}`}
+                {`${address}, ${city}, ${state}, ${country} ${pincode}`}
               </p>
               <h5>Amount Info</h5>
               <p>Subtotal: {subtotal}</p>

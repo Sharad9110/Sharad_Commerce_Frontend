@@ -89,7 +89,7 @@ const Dashboard = () => {
                 <h2>Inventory</h2>
 
                 <div>
-                  {stats.categoryCount.map((i: { [s: string]: unknown; } | ArrayLike<unknown>) => {
+                  {stats.categoryCount.map((i) => {
                     const [heading, value] = Object.entries(i)[0];
                     return (
                       <CategoryItem
